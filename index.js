@@ -10,7 +10,7 @@ const datastore = Datastore({
  * @param {object} event The Cloud Functions event.
  * @param {function} The callback function.
  */
-exports.storeSoilMeasures = function helloPubSub (event, callback) {
+exports.storeSoilMeasures = function storeSoilMeasures (event, callback) {
   const pubsubMessage = event.data;
 
   const kind = 'soil_measure'
