@@ -3,6 +3,7 @@ const projectId = 'slurp-165217';
 const datastore = Datastore({
   projectId: projectId
 });
+
 /**
  * Background Cloud Function to be triggered by Pub/Sub.
  *
@@ -29,8 +30,6 @@ exports.storeSoilMeasures = function helloPubSub (event, callback) {
   .then(() => {
     console.log(`Saved ${task.key.name}`);
   });
-
-
 
   callback();
 };
