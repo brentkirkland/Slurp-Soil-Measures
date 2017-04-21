@@ -43,7 +43,8 @@ exports.storeSoilMeasures = function storeSoilMeasures (event, callback) {
     data: {
       last_temp: data.temp,
       last_humidity: data.humidity,
-      device_id: name
+      device_id: name,
+      last_updated: pubsubMessage.attributes.published_at
     }
   };
 
